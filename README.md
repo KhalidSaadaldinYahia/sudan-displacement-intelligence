@@ -23,7 +23,9 @@ The State Pressure Matrix uses a diverging **pressure fingerprint**: IDP caseloa
 
 ## Open the project
 
-Download the project ZIP from this repository, extract it, and open `SudanPressureFingerprint.pbip` in a recent version of Power BI Desktop with Power BI Project (`.pbip`) support.
+[Download the Power BI project archive](Sudan_Displacement_30_June_2026_Power_BI_Project.rar), extract it, and open the `.pbip` file in a recent version of Power BI Desktop with Power BI Project (`.pbip`) support.
+
+Preview the completed dashboard: [open the PDF](Sudan_Displacement_30_June_2026_Dashboard.pdf).
 
 ## Source and limitations
 
