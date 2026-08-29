@@ -279,28 +279,6 @@ The methodology was specifically aligned with the Sudan IOM DTM dataset so that 
 
 ---
 
-## Open the Project
-
-1. Download the Power BI project archive:
-
-   [Sudan Displacement Power BI Project](Sudan_Displacement_30_June_2026_Power_BI_Project.rar)
-
-2. Extract the archive.
-
-3. Open the `.pbip` file using a recent version of **Power BI Desktop** with Power BI Project support.
-
-4. If Power Query requests the data location, update the source path to the data file included in the extracted project folder.
-
----
-
-## Dashboard Preview
-
-You can view the completed dashboard here:
-
-[Open the dashboard PDF](Sudan_Displacement_30_June_2026_Dashboard.pdf)
-
----
-
 ## Source
 
 **IOM Displacement Tracking Matrix (DTM) Sudan**
