@@ -51,6 +51,12 @@ Data Analyst | Power BI | Python | SQL | Excel
 - [Preview the dashboard PDF](Sudan_Displacement_Return_Monitor.pdf). A PDF is a static export; the `.pbip` project contains the interactive report.
 - [Browse the Power BI project](project/) or [download this repository as a ZIP](https://github.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/archive/refs/heads/main.zip). Keep the `project` folder intact after extracting.
 - Open [`SudanPressureFingerprint.pbip`](project/SudanPressureFingerprint.pbip) from the extracted `project` folder in a recent Power BI Desktop. The `.pbip` file references its sibling `.Report` and `.SemanticModel` folders; it cannot open by itself after downloading only that file.
-- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository's public `main` branch. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
+- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository at fixed commit `dd373b34834b`. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
 
 The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.
+
+### Reproducible data snapshot
+
+The semantic model reads CSV files from immutable commit `dd373b34834b116453468992fdcd1ba72cbac8fb`. The same files are included in `project/data/` for inspection. Refreshing this project will not silently switch to a later `main` branch snapshot. To analyze newer data, update the CSV and source URL together and revalidate the measures and preview.
+
+The snapshot corresponds to IOM DTM Sudan Displacement and Return Snapshot (7), 30 June 2026. The repository contains the prepared locality-level CSV, but not the upstream extraction script or access-controlled detailed source file; the published IOM totals and locality count are the external reconciliation points.

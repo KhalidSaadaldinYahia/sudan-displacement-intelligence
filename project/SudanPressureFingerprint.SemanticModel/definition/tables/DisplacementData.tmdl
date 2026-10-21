@@ -109,7 +109,7 @@ table DisplacementData
 		mode: import
 		source =
 				let
-					Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/main/project/data/sudan_displacement_state_snapshot.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/dd373b34834b116453468992fdcd1ba72cbac8fb/project/data/sudan_displacement_state_snapshot.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 					Typed = Table.TransformColumnTypes(PromotedHeaders, {{"Locality", type text}, {"Locality Code", type text}, {"Snapshot Year", Int64.Type}, {"IDPs", Int64.Type}, {"IDP Households", Int64.Type}, {"Returned Individuals", Int64.Type}, {"People Represented", Int64.Type}, {"State", type text}, {"Other People in Need", Int64.Type}})
 				in
