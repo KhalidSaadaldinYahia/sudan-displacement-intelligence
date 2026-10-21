@@ -26,13 +26,6 @@ A four-page Power BI project examining internal displacement and return movement
 
 The combined people-represented metric is the sum of reported IDPs and returned individuals. It is not a historical cumulative total or a count of unique people over time.
 
-## Open the project
-
-1. [Download the Power BI project archive](Sudan_Displacement_Return_Monitor_Power_BI_Project.zip) and extract it.
-2. Open `SudanPressureFingerprint.pbip` in a recent version of Power BI Desktop.
-3. If prompted, set the `DataFolder` parameter to the extracted project's `data` folder and refresh.
-
-Preview the completed dashboard: [open the PDF](Sudan_Displacement_Return_Monitor.pdf).
 
 ## Source and limitations
 
@@ -44,7 +37,7 @@ DTM figures are operational estimates and may be revised as verification and acc
 
 - Power BI Project (`.pbip`) format
 - PBIR report definition and TMDL semantic model
-- Power Query data preparation with a reusable `DataFolder` parameter
+- Power Query data preparation from a public, versioned CSV snapshot
 - DAX measures and interactive state/locality filtering
 - Dedicated methodology and source documentation
 
@@ -52,3 +45,12 @@ DTM figures are operational estimates and may be revised as verification and acc
 
 **Khalid SaadAldin Yahia**
 Data Analyst | Power BI | Python | SQL | Excel
+
+## Open and inspect the report
+
+- [Preview the dashboard PDF](Sudan_Displacement_Return_Monitor.pdf). A PDF is a static export; the `.pbip` project contains the interactive report.
+- [Browse the Power BI project](project/) or [download this repository as a ZIP](https://github.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/archive/refs/heads/main.zip). Keep the `project` folder intact after extracting.
+- Open [`SudanPressureFingerprint.pbip`](project/SudanPressureFingerprint.pbip) from the extracted `project` folder in a recent Power BI Desktop. The `.pbip` file references its sibling `.Report` and `.SemanticModel` folders; it cannot open by itself after downloading only that file.
+- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository's public `main` branch. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
+
+The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.

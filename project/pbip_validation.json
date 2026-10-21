@@ -1,0 +1,12 @@
+{
+  "entities": [
+    "DisplacementData"
+  ],
+  "missing_properties": [],
+  "json_files": 59,
+  "bom_files": [],
+  "rows": 185,
+  "states": 18,
+  "localities": 185,
+  "pages": 4
+}
