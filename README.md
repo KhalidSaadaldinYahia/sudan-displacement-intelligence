@@ -1,10 +1,8 @@
 # Sudan Displacement & Return Monitor
 
-## Download the complete project
+## Open the interactive dashboard
 
-**To open this project:** [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/archive/refs/heads/main.zip), extract it, and open `project/SudanPressureFingerprint.pbip` in Power BI Desktop. Keep the `.Report`, `.SemanticModel`, and `data` folders beside the `.pbip` file. **Downloading the `.pbip` file alone will not produce a working report.** The included CSVs are the inspectable data snapshot; the model refreshes from a fixed online copy of those CSVs by default. The PDF is a static preview.
-
-A four-page Power BI project examining internal displacement and return movements across Sudan using the public **IOM Displacement Tracking Matrix (DTM) Sudan IDPs and Returnees Snapshot 007**, dated **30 June 2026**.
+**Recommended:** [download SudanPressureFingerprint.pbix](SudanPressureFingerprint.pbix) and open it in a recent Power BI Desktop. The PBIX contains the report and its embedded data model, so you only need this one file to explore the saved dashboard. For reproducible source files and the included CSV snapshot, [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/archive/refs/heads/main.zip), extract it, and open `project/SudanPressureFingerprint.pbip` with its sibling `.Report`, `.SemanticModel`, and `data` folders intact. The PDF below is a static preview. A data refresh may require network access to the documented source snapshot.
 
 ## Analytical questions
 
