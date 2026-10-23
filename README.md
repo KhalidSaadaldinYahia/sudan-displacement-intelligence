@@ -1,8 +1,11 @@
 # Sudan Displacement & Return Monitor
 
-## Open the interactive dashboard
+## Files
 
-**Recommended:** [download SudanPressureFingerprint.pbix](SudanPressureFingerprint.pbix) and open it in a recent Power BI Desktop. The PBIX contains the report and its embedded data model, so you only need this one file to explore the saved dashboard. For reproducible source files and the included CSV snapshot, [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/archive/refs/heads/main.zip), extract it, and open `project/SudanPressureFingerprint.pbip` with its sibling `.Report`, `.SemanticModel`, and `data` folders intact. The PDF below is a static preview. A data refresh may require network access to the documented source snapshot.
+- [Open the Power BI dashboard](SudanPressureFingerprint.pbix) in Power BI Desktop.
+- [Read the PDF analytical preview](Sudan_Displacement_Return_Monitor.pdf). This PDF summarises independently checked figures; it is not yet a page-for-page export of the PBIX. A matching PDF export is pending verification in Power BI Desktop.
+
+The PBIX is the single-file dashboard. A data refresh may need network access to its saved source URLs.
 
 ## Analytical questions
 
@@ -37,7 +40,7 @@ DTM figures are operational estimates and may be revised as verification and acc
 
 ## Technical features
 
-- Power BI Project (`.pbip`) format
+- Power BI Desktop (`.pbix`) report and semantic model
 - PBIR report definition and TMDL semantic model
 - Power Query data preparation from a public, versioned CSV snapshot
 - DAX measures and interactive state/locality filtering
@@ -47,18 +50,3 @@ DTM figures are operational estimates and may be revised as verification and acc
 
 **Khalid SaadAldin Yahia**
 Data Analyst | Power BI | Python | SQL | Excel
-
-## Open and inspect the report
-
-- [Preview the dashboard PDF](Sudan_Displacement_Return_Monitor.pdf). A PDF is a static export; the `.pbip` project contains the interactive report.
-- [Browse the Power BI project](project/) or [download this repository as a ZIP](https://github.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/archive/refs/heads/main.zip). Keep the `project` folder intact after extracting.
-- Open [`SudanPressureFingerprint.pbip`](project/SudanPressureFingerprint.pbip) from the extracted `project` folder in a recent Power BI Desktop. The `.pbip` file references its sibling `.Report` and `.SemanticModel` folders; it cannot open by itself after downloading only that file.
-- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository at fixed commit `dd373b34834b`. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
-
-The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.
-
-### Reproducible data snapshot
-
-The semantic model reads CSV files from immutable commit `dd373b34834b116453468992fdcd1ba72cbac8fb`. The same files are included in `project/data/` for inspection. Refreshing this project will not silently switch to a later `main` branch snapshot. To analyze newer data, update the CSV and source URL together and revalidate the measures and preview.
-
-The snapshot corresponds to IOM DTM Sudan Displacement and Return Snapshot (7), 30 June 2026. The repository contains the prepared locality-level CSV, but not the upstream extraction script or access-controlled detailed source file; the published IOM totals and locality count are the external reconciliation points.
