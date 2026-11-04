@@ -3,7 +3,7 @@
 ## Files
 
 - [Download the Power BI dashboard (.pbix)](https://github.com/KhalidSaadaldinYahia/sudan-displacement-intelligence/raw/refs/heads/main/SudanPressureFingerprint.pbix), then open the downloaded file in Power BI Desktop.
-- [Read the PDF analytical preview](Sudan_Displacement_Return_Monitor.pdf). This PDF summarises independently checked figures; it is not yet a page-for-page export of the PBIX. A matching PDF export is pending verification in Power BI Desktop.
+- [View the exported dashboard (PDF)](Sudan_Displacement_Return_Monitor.pdf).
 
 The PBIX is the single-file dashboard. A data refresh may need network access to its saved source URLs.
 
